@@ -8,6 +8,7 @@ ACCOUNTS = [36861409878, 34831997508]
 
 def update_data():
     L = instaloader.Instaloader()
+    L.login(os.environ["INSTA_USER"], os.environ["INSTA_PASS"])
     
     # محاولة تحميل البيانات القديمة للمقارنة
     try:
