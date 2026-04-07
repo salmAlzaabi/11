@@ -18,6 +18,9 @@ jobs:
       - name: Install Dependencies
         run: pip install instaloader
       - name: Fetch Instagram Data
+        env:
+          INSTA_USER: ${{ secrets.INSTA_USER }}
+          INSTA_PASS: ${{ secrets.INSTA_PASS }}
         run: python update_insta.py
       - name: Save Changes
         run: |
